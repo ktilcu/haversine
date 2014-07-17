@@ -13,6 +13,12 @@ var haversine = (function() {
     var units = {
       "mile" : 3960,
       "km" : 6371,
+      /** Depending on atmopheric conditions and room geometry this measurement
+          could change but if we assume average conditions within a well ventilated
+          area then we can create a reliable measurement that will fall within 2 standard
+          deviations of the actual distance. Essentially this is just an esitmate based
+          on a year of detailed experiments.
+      **/
       "niixFartRadius" : mile / 5280 *8.5
     };
 
